@@ -1,24 +1,40 @@
-# README
+# Chat Space CB設計
+## messages テーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: false, index|
+|image|string||
+|group_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :group
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|username|string|null: false, index|
+|email|string|null: false|
+|password|string|null: false|
+### Association
+- has_many :messages
+- has_many :users_groupes
+- has_many :groupes, through: :users_groupes
 
-Things you may want to cover:
+## groupesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group|string|null: false|
+### Association
+- has_many :messages
+- has_many :users_groupes
+- has_many :users, through: :users_groupes
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## users_groupesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|users_id|integer|null: false, foreign_key: true|
+|groupes_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :groupe
