@@ -21,7 +21,7 @@
 - has_many :users_groups
 - has_many :groups, through: :users_groups
 
-## groupesテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -30,7 +30,7 @@
 - has_many :users_groups
 - has_many :users, through: :users_groups
 
-## users_groupesテーブル
+## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
