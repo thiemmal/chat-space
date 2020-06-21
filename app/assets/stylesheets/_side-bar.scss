@@ -1,5 +1,13 @@
 .side-bar{
-  height: 100vh;
   width: 300px;
+}
+
+.side-bar__user-name{
+  height: 100px;
   background-color: #253141;
+}
+
+.side-bar__group-name{
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
 }
