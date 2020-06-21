@@ -13,6 +13,8 @@
       margin-left: 20px;
       &__name{
         color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
       }
       &__icons{
         width: 60px;
@@ -33,5 +35,16 @@
   &__group-name{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    &__seconds-items{
+      color: #ffffff;
+      &__name{
+        font-size: 15px;
+        padding: 20px 20px 5px 20px;
+      }
+      &__message{
+        font-size: 11px;
+        padding: 0 20px 40px 20px;
+      }
+    }
   }
 }
