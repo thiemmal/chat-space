@@ -1,13 +1,20 @@
 .side-bar{
   width: 300px;
-}
+  &__user-name{
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+      &__top-items{
+        height: 20px;
+        width: 260px;
+        margin-left: 20px;
+        background-color: #d8d8d8;
+      }
+  }
 
-.side-bar__user-name{
-  height: 100px;
-  background-color: #253141;
-}
-
-.side-bar__group-name{
-  height: calc(100vh - 100px);
-  background-color: #2f3e51;
+  &__group-name{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+  }
 }
