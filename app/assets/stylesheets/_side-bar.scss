@@ -5,12 +5,29 @@
     background-color: #253141;
     display: flex;
     align-items: center;
-      &__top-items{
-        height: 20px;
-        width: 260px;
-        margin-left: 20px;
-        background-color: #d8d8d8;
+    &__top-items{
+      display: flex;
+      justify-content: space-between;
+      height: 20px;
+      width: 260px;
+      margin-left: 20px;
+      &__name{
+        color: #ffffff;
       }
+      &__icons{
+        width: 60px;
+        &__btn{
+          display: inline-block;
+          text-decoration: none;
+          color: #ffffff;
+          display: flex;
+          justify-content: flex-end;
+          &--right{
+            padding-right: 5px;
+          }
+        }
+      }
+    }
   }
 
   &__group-name{
