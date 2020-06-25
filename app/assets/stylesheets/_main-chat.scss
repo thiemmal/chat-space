@@ -36,6 +36,30 @@
   &__message-list{
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    &__forth-items{
+      padding: 35px 0 0 40px;
+      &__upper{
+        display: flex;
+        &__name{
+          color: #333333;
+          font-weight: bold;
+          font-size: 16px;
+          padding-right: 10px;
+        }
+        &__time{
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      &__lower{
+        padding-top: 12px;
+        padding-bottom: 46px;
+        &__message{
+          color: #434A54;
+          font-size: 14px;
+        }
+      }
+    }
   }
   &__message-form{
     height: 90px;
