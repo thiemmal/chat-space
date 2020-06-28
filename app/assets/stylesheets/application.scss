@@ -1,0 +1,10 @@
+@import "reset";
+@import "modules/messages";
+@import "side-bar";
+@import "main-chat";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.wrapper{
+  display: flex;
+}

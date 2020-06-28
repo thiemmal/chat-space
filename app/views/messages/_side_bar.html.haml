@@ -1,0 +1,17 @@
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__top-items
+      %p.side-bar__user-name__top-items__name thiem
+      .side-bar__user-name__top-items__icons
+        = link_to "#", class: "side-bar__user-name__top-items__icons__btn" do
+          = icon('fas', 'edit', class: "side-bar__user-name__top-items__icons__btn--right")
+        = link_to "#", class: "side-bar__user-name__top-items__icons__btn" do
+          = icon('fas', 'cog')
+  .side-bar__group-name
+    .side-bar__group-name__seconds-items
+      %p.side-bar__group-name__seconds-items__name tennis
+      %p.side-bar__group-name__seconds-items__message nishikori
+    .side-bar__group-name__seconds-items
+      %p.side-bar__group-name__seconds-items__name soccer
+      %p.side-bar__group-name__seconds-items__message CR7
+    
