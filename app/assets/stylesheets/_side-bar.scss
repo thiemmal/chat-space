@@ -18,12 +18,11 @@
       }
       &__icons{
         width: 60px;
+        text-align: right;
         &__btn{
           display: inline-block;
           text-decoration: none;
           color: #ffffff;
-          display: flex;
-          justify-content: flex-end;
           &--right{
             padding-right: 5px;
           }
