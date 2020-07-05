@@ -19,10 +19,11 @@
       .main-chat__message-list__forth-items__lower
         %p.main-chat__message-list__forth-items__lower__message shapo
   .main-chat__message-form
-    .main-chat__message-form__fifth-items
-      .main-chat__message-form__fifth-items__content
-        %input.main-chat__message-form__fifth-items__content__text{name: "text", placeholder: "type a message"}
-        %label{class: "main-chat__message-form__fifth-items__content__image"}
-          = icon('far', 'image')
-          %input{type: "file" ,class: "main-chat__message-form__fifth-items__content__image__file"}
-      = link_to 'Send', "#", class: "main-chat__message-form__fifth-items__send-btn"  
+    =form_with model: [@group, @message] do |f|
+      .main-chat__message-form__fifth-items
+        .main-chat__message-form__fifth-items__content
+          = f.text_field :body, class: "main-chat__message-form__fifth-items__content__text", placeholder: "type a message"
+          = f.label :image, class: "main-chat__message-form__fifth-items__content__image" do
+            = icon('far', 'image')
+            = f.file_field :image, class: "main-chat__message-form__fifth-items__content__image__file"
+        = f.submit 'Send', class: "main-chat__message-form__fifth-items__send-btn" 
