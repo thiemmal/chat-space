@@ -7,17 +7,7 @@
       .main-chat__group-info__third-items__right
         = link_to 'Edit',"#", class: "main-chat__group-info__third-items__right__edit-btn" 
   .main-chat__message-list
-    .main-chat__message-list__forth-items
-      .main-chat__message-list__forth-items__upper
-        %p.main-chat__message-list__forth-items__upper__name thiem
-        %p.main-chat__message-list__forth-items__upper__time 2020年06月25日 17時00分
-      .main-chat__message-list__forth-items__lower
-        %p.main-chat__message-list__forth-items__lower__message nishikori
-      .main-chat__message-list__forth-items__upper
-        %p.main-chat__message-list__forth-items__upper__name thiem
-        %p.main-chat__message-list__forth-items__upper__time 2020年06月25日 17時01分
-      .main-chat__message-list__forth-items__lower
-        %p.main-chat__message-list__forth-items__lower__message shapo
+    = render partial: 'message', collection: @messages
   .main-chat__message-form
     =form_with model: [@group, @message] do |f|
       .main-chat__message-form__fifth-items
