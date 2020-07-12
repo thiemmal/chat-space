@@ -2,8 +2,13 @@
   .main-chat__group-info
     .main-chat__group-info__third-items
       .main-chat__group-info__third-items__left
-        %p.main-chat__group-info__third-items__left__group-name test
-        %p.main-chat__group-info__third-items__left__member Member : thiem
+        .main-chat__group-info__third-items__left__group-name
+          = @group.name
+        .main-chat__group-info__third-items__left__member 
+          Member : 
+          - @group.users.each do |member|
+            .main-chat__group-info__third-items__left__member__name
+              = member.name
       .main-chat__group-info__third-items__right
         = link_to 'Edit',"#", class: "main-chat__group-info__third-items__right__edit-btn" 
   .main-chat__message-list

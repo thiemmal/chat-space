@@ -17,6 +17,11 @@
         &__member{
           color: #999999;
           font-size: 12px;
+          display: flex;
+          &__name{
+            font-size: 13px;
+            padding-left: 5px;
+          }
         }
       }
       &__right{
