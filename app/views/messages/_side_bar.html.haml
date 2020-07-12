@@ -14,6 +14,7 @@
         = link_to group_messages_path(group) ,class: "side-bar__group-name__seconds-items__btn" do
           .side-bar__group-name__seconds-items__btn__name 
             = group.name
-          %p.side-bar__group-name__seconds-items__btn__message まだメッセージはありません。
+          %p.side-bar__group-name__seconds-items__btn__message
+            = group.show_last_message
 
     
