@@ -10,7 +10,7 @@
             .main-chat__group-info__third-items__left__member__name
               = member.name
       .main-chat__group-info__third-items__right
-        = link_to 'Edit',"#", class: "main-chat__group-info__third-items__right__edit-btn" 
+        = link_to 'Edit',edit_group_path(@group), class: "main-chat__group-info__third-items__right__edit-btn" 
   .main-chat__message-list
     = render partial: 'message', collection: @messages
   .main-chat__message-form
