@@ -8,5 +8,5 @@
     - if message.body.present?
       %p.main-chat__message-list__forth-items__lower__message
         = message.body
-    = image_tag message.image.url, class: 'Message__image' if message.image.present?
+    = image_tag message.image.url, class: 'main-chat__message-list__forth-items__lower__image' if message.image.present?
       
