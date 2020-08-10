@@ -5,6 +5,7 @@ $(function(){
                   <div class="ChatMember__add ChatMember__button" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
                 </div>`
     $('#UserSearchResult').append(html);
+    console.log(html)
   }
 
   function addNoUser() {
@@ -14,6 +15,7 @@ $(function(){
                 </div>
                 `;
     $("#UserSearchResult").append(html);
+    console.log(html)
   }
 
   $("#UserSearch__field").on("keyup", function(){
@@ -25,7 +27,7 @@ $(function(){
       data: { keyword: input },
     })
     .done(function(users){
-      $(".UserSearchResult").empty();
+      $("#UserSearchResult").empty();
       if (users.length !== 0) {
         users.forEach(function(user) {
           appendUser(user);
@@ -39,8 +41,8 @@ $(function(){
       }
       
     })
-    .fail(function(){
-      alert("通信エラーです。ユーザーが表示できません。");
+    .fail(function() {
+      alert("ユーザー検索に失敗しました");
     })
   })
 });
