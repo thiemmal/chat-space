@@ -34,6 +34,7 @@
   &__group-name{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    overflow: scroll;
     &__seconds-items{
       padding: 20px 0 40px 20px;
       &__btn{
